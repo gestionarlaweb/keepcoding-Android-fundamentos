@@ -38,7 +38,7 @@ class TopicModelTest {
         assertEquals("Welcome to Discourse", topic.title)
         assertEquals(1, topic.posts)
         assertEquals(0, topic.views)
-        assertEquals("11/12/2019 06:41:28", dateFormatted)
+        assertEquals("12/12/2019 02:41:28", dateFormatted)
     }
 
     private fun formatDate(date: String): Date {
