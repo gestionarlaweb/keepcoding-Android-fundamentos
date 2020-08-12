@@ -10,7 +10,9 @@ import io.keepcoding.eh_ho.R
 import io.keepcoding.eh_ho.data.Topic
 import io.keepcoding.eh_ho.data.TopicsRepo
 import io.keepcoding.eh_ho.inflate
+import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.fragment_topics.*
+import kotlinx.android.synthetic.main.fragment_topics.viewLoading
 
 class TopicsFragment : Fragment() {
 
@@ -62,12 +64,14 @@ class TopicsFragment : Fragment() {
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.menu_topics, menu)
         super.onCreateOptionsMenu(menu, inflater)
+        enableLoading(true)
+
     }
 
     override fun onResume() {
         super.onResume()
-
         loadTopics()
+
     }
 
     private fun loadTopics() {
@@ -76,12 +80,14 @@ class TopicsFragment : Fragment() {
                 .getTopics(it.applicationContext,
                     {
                         topicsAdapter.setTopics(it)
+                        enableLoading(false)
                     },
                     {
                        // TODO: Manejo de errores
                     }
                 )
         }
+
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -101,6 +107,18 @@ class TopicsFragment : Fragment() {
         fun onCreateTopic()
         fun onLogout()
         fun onShowPosts(topic: Topic)
+    }
+
+    // Para el ProgressBar
+    private fun enableLoading(enabled: Boolean = true) {
+        if (enabled) {
+            //fragmentContainer.visibility = View.INVISIBLE
+            fragmentContainerTopics.visibility = View.INVISIBLE
+            viewLoading.visibility = View.VISIBLE
+        } else {
+            fragmentContainerTopics.visibility = View.VISIBLE
+            viewLoading.visibility = View.INVISIBLE
+        }
     }
 
 }
