@@ -3,6 +3,7 @@ package io.keepcoding.eh_ho.topics
 import android.content.Context
 import android.os.Bundle
 import android.view.*
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -84,6 +85,7 @@ class TopicsFragment : Fragment() {
                     },
                     {
                        // TODO: Manejo de errores
+
                     }
                 )
         }

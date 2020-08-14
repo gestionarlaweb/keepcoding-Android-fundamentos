@@ -14,10 +14,7 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/topics/TopicsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/topics/TopicsActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/topics/TopicsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/topics/TopicsFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_topics.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_topics.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_topics.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_topics.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,11 +39,20 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="layoutResourceFile_vertical" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1fjmTPiw8WSzauFkuG61BI9pMlX" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -153,6 +159,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="560" y="423" key="AndroidCreateResourceFileDialog" timestamp="1597343766455">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="560" y="423" key="AndroidCreateResourceFileDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1597343766455" />
     <state width="1358" height="222" key="GridCell.Tab.0.bottom" timestamp="1597070641620">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
