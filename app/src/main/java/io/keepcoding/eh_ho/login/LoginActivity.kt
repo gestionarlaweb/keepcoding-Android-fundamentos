@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import com.google.android.material.snackbar.Snackbar
 import io.keepcoding.eh_ho.R
 import io.keepcoding.eh_ho.data.RequestError
@@ -45,6 +46,7 @@ class LoginActivity : AppCompatActivity(),
     }
 
     private fun showTopics() {
+        Toast.makeText(this, "Cuando el logeo ha sido correcto Estoy en showTopics() de LoginActivity !", Toast.LENGTH_SHORT).show()
         val intent = Intent(this, TopicsActivity::class.java)
         startActivity(intent)
         finish()

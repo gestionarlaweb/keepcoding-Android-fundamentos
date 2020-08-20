@@ -2,13 +2,14 @@ package io.keepcoding.eh_ho.topics
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import io.keepcoding.eh_ho.*
 import io.keepcoding.eh_ho.data.Topic
 import io.keepcoding.eh_ho.data.UserRepo
 import io.keepcoding.eh_ho.login.LoginActivity
-import kotlinx.android.synthetic.main.activity_login.*
+import io.keepcoding.eh_ho.posts.EXTRA_TOPIC_ID
+import io.keepcoding.eh_ho.posts.PostsActivity
 
 const val TRANSACTION_CREATE_TOPIC = "create_topic"
 
@@ -20,12 +21,15 @@ class TopicsActivity : AppCompatActivity(),
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_topics)
 
+        Toast.makeText(this, "Estoy en la carga de Topics !", Toast.LENGTH_SHORT).show()
+
         if (isFirsTimeCreated(savedInstanceState))
             supportFragmentManager.beginTransaction()
                 .add(R.id.fragmentContainer, TopicsFragment())
                 .commit()
     }
 
+    // Al pulsar en un topic de la lista
     private fun goToPosts(topic: Topic) {
 
         val intent = Intent(this, PostsActivity::class.java)
@@ -33,6 +37,7 @@ class TopicsActivity : AppCompatActivity(),
         startActivity(intent)
     }
 
+    // Boton crear topic
     override fun onCreateTopic() {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragmentContainer, CreateTopicFragment())
@@ -41,7 +46,7 @@ class TopicsActivity : AppCompatActivity(),
     }
 
     override fun onShowPosts(topic: Topic) {
-        // Al pulsar en un topic
+        // Al pulsar en un topic de la lista
         goToPosts(topic)
     }
 

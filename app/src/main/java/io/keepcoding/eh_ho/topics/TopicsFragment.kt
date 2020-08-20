@@ -3,7 +3,6 @@ package io.keepcoding.eh_ho.topics
 import android.content.Context
 import android.os.Bundle
 import android.view.*
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -65,6 +64,7 @@ class TopicsFragment : Fragment() {
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.menu_topics, menu)
         super.onCreateOptionsMenu(menu, inflater)
+
         enableLoading(true)
 
     }
@@ -76,21 +76,24 @@ class TopicsFragment : Fragment() {
     }
 
     private fun loadTopics() {
+
         context?.let {
             TopicsRepo
                 .getTopics(it.applicationContext,
                     {
                         topicsAdapter.setTopics(it)
-                        enableLoading(false)
+                        // Loading parado
+                         enableLoading(false)
                     },
                     {
                        // TODO: Manejo de errores
-
+                        // Al llegar aquí te vas a la vista de error
                     }
                 )
         }
 
     }
+
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
