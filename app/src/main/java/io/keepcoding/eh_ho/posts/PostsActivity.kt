@@ -2,8 +2,12 @@ package io.keepcoding.eh_ho.posts
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import io.keepcoding.eh_ho.R
+import io.keepcoding.eh_ho.data.PostsRepo
 import io.keepcoding.eh_ho.data.Topic
 import io.keepcoding.eh_ho.data.TopicsRepo
 import io.keepcoding.eh_ho.isFirsTimeCreated
@@ -21,9 +25,26 @@ class PostsActivity : AppCompatActivity() {
         val topicId: String = intent.getStringExtra(EXTRA_TOPIC_ID) ?: ""
         val topic: Topic? = TopicsRepo.getTopic(topicId)
 
-        topic?.let {
+        /*
+         topic?.let {
             labelTitle.text = it.title
         }
+         */
 
+
+        // Imprimir en la consola
+        //Log.d(PostsActivity::class.simpleName, PostsRepo.posts.toString())
+
+        // Gracias a    import kotlinx.android.synthetic.main.activity_posts.*
+        // llamamos directamente al ID de la vista list_posts
+        //val list: RecyclerView = findViewById(R.id.list_posts)
+
+        // Crear el Adaptador
+        val adapter = PostsAdapter()
+        adapter.setPosts(PostsRepo.posts)
+
+        listPosts.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+
+        listPosts.adapter = adapter
     }
 }

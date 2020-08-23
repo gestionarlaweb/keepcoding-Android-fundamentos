@@ -89,3 +89,22 @@ object TopicsRepo {
     fun getTopic(id: String): Topic? = topics.find { it.id == id }
 
 }
+
+
+// POSTS
+object PostsRepo {
+    val posts: MutableList<Post> = mutableListOf()
+    get() {
+        if (field.isEmpty())
+            field.addAll(createDummyPosts())
+        return field
+    }
+
+    fun createDummyPosts(count: Int = 10): List<Post> =
+        (0..count).map {
+            Post(
+                author = "Post $it",
+                content = "Content $it"
+            )
+        }
+}

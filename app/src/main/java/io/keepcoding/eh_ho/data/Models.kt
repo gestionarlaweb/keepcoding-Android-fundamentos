@@ -94,3 +94,9 @@ data class Topic(
         return TimeOffset(0, Calendar.MINUTE)
     }
 }
+
+data class Post(
+    val id: String = UUID.randomUUID().toString(), // Id aleatorio
+    val author: String = "",
+    val content: String
+)

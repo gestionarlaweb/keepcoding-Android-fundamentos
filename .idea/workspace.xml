@@ -21,14 +21,10 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/PostsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/posts/PostsActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/login/LoginActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/login/LoginActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/topics/TopicsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/topics/TopicsActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/topics/TopicsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/topics/TopicsFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/data/Models.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/data/Models.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/data/TopicsRepo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/data/TopicsRepo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/posts/PostsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/posts/PostsActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_posts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_posts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_error.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_error.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,9 +53,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="layoutResourceFile_vertical" />
-        <option value="layoutResourceFile" />
         <option value="Class" />
         <option value="Kotlin Class" />
+        <option value="layoutResourceFile" />
       </list>
     </option>
   </component>
@@ -184,26 +180,30 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1096" y="420" key="AndroidCreateResourceFileDialog" timestamp="1597930229696">
+    <state x="674" y="247" key="#com.intellij.ide.util.MemberChooser" timestamp="1598106726768">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="1096" y="420" key="AndroidCreateResourceFileDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1597930229696" />
-    <state width="1358" height="222" key="GridCell.Tab.0.bottom" timestamp="1597931227542">
+    <state x="674" y="247" key="#com.intellij.ide.util.MemberChooser/0.23.1920.1057@0.23.1920.1057" timestamp="1598106726768" />
+    <state x="1096" y="420" key="AndroidCreateResourceFileDialog" timestamp="1598189199927">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1358" height="222" key="GridCell.Tab.0.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1597931227542" />
-    <state width="1358" height="222" key="GridCell.Tab.0.center" timestamp="1597931227542">
+    <state x="1096" y="420" key="AndroidCreateResourceFileDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1598189199927" />
+    <state width="1774" height="229" key="GridCell.Tab.0.bottom" timestamp="1598020767846">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1358" height="222" key="GridCell.Tab.0.center/0.23.1920.1057@0.23.1920.1057" timestamp="1597931227541" />
-    <state width="1358" height="222" key="GridCell.Tab.0.left" timestamp="1597931227541">
+    <state width="1774" height="229" key="GridCell.Tab.0.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1598020767846" />
+    <state width="1774" height="229" key="GridCell.Tab.0.center" timestamp="1598020767845">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1358" height="222" key="GridCell.Tab.0.left/0.23.1920.1057@0.23.1920.1057" timestamp="1597931227541" />
-    <state width="1358" height="222" key="GridCell.Tab.0.right" timestamp="1597931227542">
+    <state width="1774" height="229" key="GridCell.Tab.0.center/0.23.1920.1057@0.23.1920.1057" timestamp="1598020767845" />
+    <state width="1774" height="229" key="GridCell.Tab.0.left" timestamp="1598020767845">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1358" height="222" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1597931227542" />
+    <state width="1774" height="229" key="GridCell.Tab.0.left/0.23.1920.1057@0.23.1920.1057" timestamp="1598020767845" />
+    <state width="1774" height="229" key="GridCell.Tab.0.right" timestamp="1598020767845">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1774" height="229" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1598020767845" />
     <state x="499" y="267" key="RollbackChangesDialog" timestamp="1597072494203">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
