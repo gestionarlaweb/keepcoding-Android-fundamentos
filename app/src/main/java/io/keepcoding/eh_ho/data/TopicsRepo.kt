@@ -100,10 +100,13 @@ object PostsRepo {
         return field
     }
 
+    // Obtner los datos
+    fun getPost(id: String): Post? = posts.find { it.id == id }
+
     fun createDummyPosts(count: Int = 10): List<Post> =
         (0..count).map {
             Post(
-                author = "Post $it",
+                author = "Post número $it",
                 content = "Content $it"
             )
         }
