@@ -17,39 +17,21 @@ import kotlinx.android.synthetic.main.activity_posts.*
 
 const val EXTRA_TOPIC_ID = "TOPIC_ID"
 
-class PostsActivity : AppCompatActivity() {
+const val TRANSACTION_CREATE_POST = "create_post"
+
+class PostsActivity : AppCompatActivity(), PostsFragment.PostsInteractionListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_posts)
 
         Toast.makeText(this, "Al pulsar en un topìc de la lista estoy aquí, en PostActivity !", Toast.LENGTH_SHORT).show()
 
-       // val topicId: String = intent.getStringExtra(EXTRA_TOPIC_ID) ?: ""
-       // val topic: Topic? = TopicsRepo.getTopic(topicId)
+        // Asociar el Fragmento activity_post.xml
+        if (isFirsTimeCreated(savedInstanceState))
+            supportFragmentManager.beginTransaction()
+                .add(R.id.fragment_container_posts, PostsFragment())
+                .commit()
 
-        /*
-         topic?.let {
-            labelTitle.text = it.title
-        }
-         */
-
-
-        // Imprimir en la consola
-        //Log.d(PostsActivity::class.simpleName, PostsRepo.posts.toString())
-
-        // Gracias a    import kotlinx.android.synthetic.main.activity_posts.*
-        // llamamos directamente al ID de la vista list_posts
-        //val list: RecyclerView = findViewById(R.id.list_posts)
-
-        // Crear el Adaptador, Avísame cuando le hayas dado click a algo en el PostAdapter()
-        val adapter = PostsAdapter {
-          //  Log.d(PostsActivity::class.java.canonicalName, it.author)
-            goToPostsDetail(it)
-        }
-        adapter.setPosts(PostsRepo.posts)
-
-        listPosts.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        listPosts.adapter = adapter
     }
 
     // Ir a la actividad PostActivityDetail.kt
@@ -58,5 +40,18 @@ class PostsActivity : AppCompatActivity() {
 
        intent.putExtra(EXTRA_POST_ID, post.id)
         startActivity(intent)
+    }
+
+    override fun onDetailPost(post: Post) {
+        // Que hacer cuando se muestre el Post seleccionado
+        goToPostsDetail(post)
+    }
+
+    override fun onCreatePost() {
+        // Que hacer cuando se cree el nuevo Post
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container_posts, CreatePostFragment())
+            .addToBackStack(TRANSACTION_CREATE_POST)
+            .commit()
     }
 }
