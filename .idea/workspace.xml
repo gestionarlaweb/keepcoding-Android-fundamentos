@@ -20,10 +20,10 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/posts/PostsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/posts/PostsActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_posts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_posts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/posts/CreatePostFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/posts/CreatePostFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_create_post.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_create_post.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +55,7 @@
         <option value="layoutResourceFile" />
         <option value="Kotlin Class" />
         <option value="layoutResourceFile_vertical" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -77,6 +78,9 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SelectDeploymentTargetsDialog.selectedDevices" value="Nexus_6_API_26" />
     <property name="memory.settings.postsync.last.time.stamp" value="1598264032764" />
+    <property name="project.structure.last.edited" value="Dependencies" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.-1938321701">
@@ -183,14 +187,22 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="440" y="262" key="#PSD" timestamp="1598364395694">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="440" y="262" key="#PSD/0.23.1920.1057@0.23.1920.1057" timestamp="1598364395694" />
     <state x="674" y="247" key="#com.intellij.ide.util.MemberChooser" timestamp="1598281186302">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="674" y="247" key="#com.intellij.ide.util.MemberChooser/0.23.1920.1057@0.23.1920.1057" timestamp="1598281186302" />
-    <state x="1096" y="420" key="AndroidCreateResourceFileDialog" timestamp="1598281417454">
+    <state x="1096" y="420" key="AndroidCreateResourceFileDialog" timestamp="1598365926721">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="1096" y="420" key="AndroidCreateResourceFileDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1598281417454" />
+    <state x="1096" y="420" key="AndroidCreateResourceFileDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1598365926721" />
+    <state x="770" y="384" key="AndroidCreateXmlResourceDialog" timestamp="1598366888332">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="770" y="384" key="AndroidCreateXmlResourceDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1598366888332" />
     <state width="1774" height="229" key="GridCell.Tab.0.bottom" timestamp="1598278830554">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
