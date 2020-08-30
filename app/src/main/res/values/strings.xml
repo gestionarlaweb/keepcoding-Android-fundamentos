@@ -14,7 +14,7 @@
     <string name="hint_title">Title</string>
     <string name="hint_content">Content</string>
     <string name="hint_author">Author</string>
-    <string name="hint_date">Date</string>
+    <string name="hint_date">Fecha creación</string>
     <string name="label_send">Send</string>
     <string name="error_empty">This field cannot be empty</string>
 

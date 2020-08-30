@@ -1,13 +1,27 @@
 package io.keepcoding.eh_ho.posts
 
+import android.content.Context
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import io.keepcoding.eh_ho.R
+import io.keepcoding.eh_ho.data.PostsRepo
 import io.keepcoding.eh_ho.inflate
 import kotlinx.android.synthetic.main.fragment_create_post.*
+import java.lang.IllegalArgumentException
 
 class CreatePostFragment : Fragment() {
+
+    var interactionListener: CreatePostInteractionListener? = null
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+
+        if (context is CreatePostInteractionListener)
+            this.interactionListener = context
+        else
+            throw IllegalArgumentException("Context doesn't implement ${CreatePostInteractionListener::class.java.canonicalName}")
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,10 +51,15 @@ class CreatePostFragment : Fragment() {
         return super.onOptionsItemSelected(item)
     }
 
-    fun createPost() {
+    private fun createPost() {
         // Validar el campo inputPost del formulario
         if (isFormValid()){
             // Si es valido crear el Post
+            PostsRepo.addPost(
+                inputPost.text.toString()
+            )
+            // Informar a la actividad
+            interactionListener?.onPostCreated()
         }else {
             // Error
             showErrors()
@@ -53,4 +72,8 @@ class CreatePostFragment : Fragment() {
     }
 
     private fun isFormValid() = inputPost.text.isNotEmpty()
+
+    interface CreatePostInteractionListener {
+        fun onPostCreated()
+    }
 }

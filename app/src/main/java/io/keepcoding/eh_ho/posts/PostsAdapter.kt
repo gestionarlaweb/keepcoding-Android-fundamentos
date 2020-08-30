@@ -10,6 +10,7 @@ import io.keepcoding.eh_ho.R
 import io.keepcoding.eh_ho.data.Post
 import io.keepcoding.eh_ho.data.Topic
 import io.keepcoding.eh_ho.topics.TopicsAdapter
+import kotlinx.android.synthetic.main.activity_posts_detail.view.*
 import kotlinx.android.synthetic.main.item_posts.view.*
 
 class PostsAdapter(val postClickListener: ((Post) -> Unit) ? = null) : RecyclerView.Adapter<PostsAdapter.PostHolder>() {
@@ -56,7 +57,12 @@ fun setPosts(posts: List<Post>){
         set(value) {
             field = value
             itemView.tag = field
-            itemView.labelPost.text = field?.author
+            field?.let {
+                itemView.labelPost.text = it.author
+                itemView.inputContent.text = it.contenido // contenido del POST "cooked" !!!
+                itemView.inputDate.text = it.fecha // "created_at"
+            }
+
         }
     }
 

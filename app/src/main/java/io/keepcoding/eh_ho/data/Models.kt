@@ -98,5 +98,7 @@ data class Topic(
 data class Post(
     val id: String = UUID.randomUUID().toString(), // Id aleatorio
     val author: String = "",
-    val content: String
+    val title: String = "",
+    val contenido: String = "",  // "cooked"
+    val fecha: String = "" // "created_at"
 )

@@ -94,20 +94,34 @@ object TopicsRepo {
 // POSTS
 object PostsRepo {
     val posts: MutableList<Post> = mutableListOf()
-    get() {
-        if (field.isEmpty())
-            field.addAll(createDummyPosts())
-        return field
-    }
+        // Para el DummyPosts
+        /*
+        get() {
+                if (field.isEmpty())
+                    field.addAll(createDummyPosts())
+                return field
+         }
 
-    // Obtner los datos
+        fun createDummyPosts(count: Int = 10): List<Post> =
+            (0..count).map {
+                Post(
+                    author = "Post número $it",
+                    title = "Título $it"
+                )
+         }
+    */
+
+    // Obtener los datos
     fun getPost(id: String): Post? = posts.find { it.id == id }
 
-    fun createDummyPosts(count: Int = 10): List<Post> =
-        (0..count).map {
+    // Enviar Post
+    fun addPost(title: String){
+        posts.add(
             Post(
-                author = "Post número $it",
-                content = "Content $it"
+                title = title
             )
-        }
+        )
+    }
+
+
 }
