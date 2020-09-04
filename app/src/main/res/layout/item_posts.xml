@@ -17,7 +17,7 @@
                 tools:text="Author" />
 
             <TextView
-                android:id="@+id/inputContent"
+                android:id="@+id/labelContent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="top"
@@ -25,7 +25,7 @@
                 android:minHeight="112dp" />
 
             <TextView
-                android:id="@+id/inputDate"
+                android:id="@+id/labelDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/hint_date"/>

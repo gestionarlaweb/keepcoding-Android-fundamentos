@@ -19,9 +19,8 @@ const val EXTRA_TOPIC_ID = "TOPIC_ID"
 
 const val TRANSACTION_CREATE_POST = "create_post"
 
-class PostsActivity : AppCompatActivity(),
-    PostsFragment.PostsInteractionListener,
-    CreatePostFragment.CreatePostInteractionListener {
+class PostsActivity : AppCompatActivity(), PostsFragment.PostsInteractionListener, CreatePostFragment.CreatePostInteractionListener {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_posts)

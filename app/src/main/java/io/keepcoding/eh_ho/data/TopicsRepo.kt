@@ -4,6 +4,7 @@ import android.content.Context
 import com.android.volley.NetworkError
 import com.android.volley.Request
 import com.android.volley.ServerError
+import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.JsonObjectRequest
 import io.keepcoding.eh_ho.R
 import org.json.JSONObject
@@ -94,22 +95,38 @@ object TopicsRepo {
 // POSTS
 object PostsRepo {
     val posts: MutableList<Post> = mutableListOf()
-        // Para el DummyPosts
-        /*
-        get() {
-                if (field.isEmpty())
-                    field.addAll(createDummyPosts())
-                return field
-         }
 
-        fun createDummyPosts(count: Int = 10): List<Post> =
-            (0..count).map {
-                Post(
-                    author = "Post número $it",
-                    title = "Título $it"
-                )
-         }
-    */
+    fun getPosts(
+        context: Context,
+        onSuccess: (List<Post>) -> Unit,
+        onError: (RequestError) -> Unit,
+        postId: String = ""
+    ) {
+        val request = JsonObjectRequest(  // En caso de Objetos
+        //val request = JsonArrayRequest(     // En caso de Array
+            Request.Method.GET,
+            ApiRoutes.getPosts(postId),
+            null,
+            {
+                // Exitoso y le mando la lista de POSTS
+                val list = Post.parsePostsList(it)
+                onSuccess(list)
+            },
+            {
+                // Error
+                it.printStackTrace()
+                val requestError =
+                    if (it is NetworkError)
+                        RequestError(it, messageResId = R.string.error_no_internet)
+                else
+                        RequestError(it)
+                onError(requestError)
+            }
+        )
+        ApiRequestQueue
+            .getRequestQueue(context)
+            .add(request)
+    }
 
     // Obtener los datos
     fun getPost(id: String): Post? = posts.find { it.id == id }
@@ -118,7 +135,7 @@ object PostsRepo {
     fun addPost(title: String){
         posts.add(
             Post(
-                title = title
+               // title = title
             )
         )
     }

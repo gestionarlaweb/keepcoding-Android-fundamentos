@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import io.keepcoding.eh_ho.R
 import io.keepcoding.eh_ho.data.Post
 import io.keepcoding.eh_ho.data.PostsRepo
+import io.keepcoding.eh_ho.data.TopicsRepo
 import io.keepcoding.eh_ho.inflate
 import io.keepcoding.eh_ho.login.SignInFragment
 import kotlinx.android.synthetic.main.fragment_posts.*
@@ -56,6 +57,20 @@ class PostsFragment : Fragment() {
 
         listPosts.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         listPosts.adapter = adapter
+    }
+
+    override fun onResume() {
+        super.onResume()
+        context?.let {
+            PostsRepo
+                .getPosts(it.applicationContext,
+                    {
+                        (listPosts.adapter as PostsAdapter).setPosts(it)
+                    },
+                    {}
+                )
+        }
+
     }
 
     override fun onDetach() {

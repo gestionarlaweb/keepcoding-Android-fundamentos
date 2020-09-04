@@ -59,8 +59,8 @@ fun setPosts(posts: List<Post>){
             itemView.tag = field
             field?.let {
                 itemView.labelPost.text = it.author
-                itemView.inputContent.text = it.contenido // contenido del POST "cooked" !!!
-                itemView.inputDate.text = it.fecha // "created_at"
+                itemView.labelContent.text = it.contenido // contenido del POST "cooked" !!!
+                itemView.labelDate.text = it.fecha // "created_at"
             }
 
         }

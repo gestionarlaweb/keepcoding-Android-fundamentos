@@ -1,8 +1,10 @@
 package io.keepcoding.eh_ho.data
 
+import org.json.JSONArray
 import org.json.JSONObject
 import java.text.SimpleDateFormat
 import java.util.*
+import java.util.logging.SimpleFormatter
 
 data class Topic(
     val id: String = UUID.randomUUID().toString(),
@@ -96,9 +98,45 @@ data class Topic(
 }
 
 data class Post(
-    val id: String = UUID.randomUUID().toString(), // Id aleatorio
-    val author: String = "",
-    val title: String = "",
+    val id: String = "", // Id aleatorio
+    val author: String = "", // "username"
+    //val title: String = "",
     val contenido: String = "",  // "cooked"
     val fecha: String = "" // "created_at"
-)
+){
+    companion object{
+        // Para la respuesta del POST
+        fun parsePostsList(response: JSONObject): List<Post> {
+            // Obtener el listado de ese Array
+            val objectList = response.getJSONObject("post_stream").getJSONArray("posts")
+
+            val posts = mutableListOf<Post>()
+            // Iterar sobre el Array capturado dentro de objectList
+            for (i in 0 until objectList.length()){
+                val parsedPosts = parsePost(objectList.getJSONObject(i))
+                // Lo añado a la lista
+                posts.add(parsedPosts)
+            }
+            return posts
+        }
+
+        // Parseamos el JSON - JSON OBJECT y despues llegar al ARREGLO de "POSTS" desde fun parsePostsList
+        fun parsePost(jsonObject: JSONObject): Post {
+
+            val date = jsonObject.getString("created_at")
+                .replace("Z", "+0000")
+            val dateFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ", Locale.getDefault())
+            val dateFormatted = dateFormat.parse(date) ?: Date()
+            val dateFormatString = SimpleDateFormat("yyy-MM-dd")
+            val dateFormattedString = dateFormatString.format(dateFormatted)
+
+            return Post(
+                id = jsonObject.getInt("id").toString(),
+                author = jsonObject.getString("username"),
+                fecha = dateFormattedString,
+                contenido = jsonObject.getString("cooked")
+
+            )
+        }
+    }
+}
