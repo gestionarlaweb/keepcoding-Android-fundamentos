@@ -32,7 +32,8 @@ object ApiRoutes {
 
     fun getPosts(id: String) =
         uriBuilder()
-            .appendPath("t${id}.json")
+            .appendPath("t")
+            .appendPath("${id}.json")
             .build()
             .toString()
 

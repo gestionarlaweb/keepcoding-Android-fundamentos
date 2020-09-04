@@ -98,7 +98,7 @@ data class Topic(
 }
 
 data class Post(
-    val id: String = "", // Id aleatorio
+    val id: String = "", // Id
     val author: String = "", // "username"
     //val title: String = "",
     val contenido: String = "",  // "cooked"

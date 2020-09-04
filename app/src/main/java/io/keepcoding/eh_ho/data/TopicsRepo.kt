@@ -100,7 +100,7 @@ object PostsRepo {
         context: Context,
         onSuccess: (List<Post>) -> Unit,
         onError: (RequestError) -> Unit,
-        postId: String = ""
+        postId: String = "1"
     ) {
         val request = JsonObjectRequest(  // En caso de Objetos
         //val request = JsonArrayRequest(     // En caso de Array

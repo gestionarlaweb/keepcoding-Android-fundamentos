@@ -1,10 +1,14 @@
 package io.keepcoding.eh_ho.posts
 
+import android.os.Build
+import android.text.Html
+import android.text.Html.FROM_HTML_SEPARATOR_LINE_BREAK_PARAGRAPH
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import io.keepcoding.eh_ho.R
 import io.keepcoding.eh_ho.data.Post
@@ -54,12 +58,13 @@ fun setPosts(posts: List<Post>){
 
     inner class PostHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         var post: Post? = null
+        @RequiresApi(Build.VERSION_CODES.N)
         set(value) {
             field = value
             itemView.tag = field
             field?.let {
                 itemView.labelPost.text = it.author
-                itemView.labelContent.text = it.contenido // contenido del POST "cooked" !!!
+                itemView.labelContent.text = Html.fromHtml(it.contenido, FROM_HTML_SEPARATOR_LINE_BREAK_PARAGRAPH) // contenido del POST "cooked" !!!
                 itemView.labelDate.text = it.fecha // "created_at"
             }
 
