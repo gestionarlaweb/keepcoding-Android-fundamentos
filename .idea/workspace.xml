@@ -19,12 +19,17 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/data/ApiModels.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/data/ApiModels.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/data/ApiRoutes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/data/ApiRoutes.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/data/Models.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/data/Models.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/data/TopicsRepo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/data/TopicsRepo.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/posts/PostsAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/posts/PostsAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/posts/CreatePostFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/posts/CreatePostFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/posts/PostsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/posts/PostsActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/posts/PostsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/posts/PostsFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/topics/TopicsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/topics/TopicsActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_create_post.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_create_post.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,42 +221,46 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="841" y="323" key="AndroidProcessChooserDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1599216740364" />
-    <state width="1878" height="119" key="GridCell.Tab.0.bottom" timestamp="1599257936804">
+    <state width="1878" height="191" key="GridCell.Tab.0.bottom" timestamp="1599312614196">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1878" height="119" key="GridCell.Tab.0.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1599257936804" />
-    <state width="1878" height="119" key="GridCell.Tab.0.center" timestamp="1599257936804">
+    <state width="1878" height="191" key="GridCell.Tab.0.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1599312614196" />
+    <state width="1878" height="191" key="GridCell.Tab.0.center" timestamp="1599312614195">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1878" height="119" key="GridCell.Tab.0.center/0.23.1920.1057@0.23.1920.1057" timestamp="1599257936804" />
-    <state width="1878" height="119" key="GridCell.Tab.0.left" timestamp="1599257936804">
+    <state width="1878" height="191" key="GridCell.Tab.0.center/0.23.1920.1057@0.23.1920.1057" timestamp="1599312614195" />
+    <state width="1878" height="191" key="GridCell.Tab.0.left" timestamp="1599312614195">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1878" height="119" key="GridCell.Tab.0.left/0.23.1920.1057@0.23.1920.1057" timestamp="1599257936804" />
-    <state width="1878" height="119" key="GridCell.Tab.0.right" timestamp="1599257936804">
+    <state width="1878" height="191" key="GridCell.Tab.0.left/0.23.1920.1057@0.23.1920.1057" timestamp="1599312614195" />
+    <state width="1878" height="191" key="GridCell.Tab.0.right" timestamp="1599312614195">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1878" height="119" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1599257936804" />
-    <state width="1878" height="191" key="GridCell.Tab.1.bottom" timestamp="1599229295657">
+    <state width="1878" height="191" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1599312614195" />
+    <state width="1878" height="191" key="GridCell.Tab.1.bottom" timestamp="1599312614197">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1878" height="191" key="GridCell.Tab.1.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1599229295657" />
-    <state width="1878" height="191" key="GridCell.Tab.1.center" timestamp="1599229295657">
+    <state width="1878" height="191" key="GridCell.Tab.1.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1599312614197" />
+    <state width="1878" height="191" key="GridCell.Tab.1.center" timestamp="1599312614196">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1878" height="191" key="GridCell.Tab.1.center/0.23.1920.1057@0.23.1920.1057" timestamp="1599229295657" />
-    <state width="1878" height="191" key="GridCell.Tab.1.left" timestamp="1599229295657">
+    <state width="1878" height="191" key="GridCell.Tab.1.center/0.23.1920.1057@0.23.1920.1057" timestamp="1599312614196" />
+    <state width="1878" height="191" key="GridCell.Tab.1.left" timestamp="1599312614196">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1878" height="191" key="GridCell.Tab.1.left/0.23.1920.1057@0.23.1920.1057" timestamp="1599229295657" />
-    <state width="1878" height="191" key="GridCell.Tab.1.right" timestamp="1599229295657">
+    <state width="1878" height="191" key="GridCell.Tab.1.left/0.23.1920.1057@0.23.1920.1057" timestamp="1599312614196" />
+    <state width="1878" height="191" key="GridCell.Tab.1.right" timestamp="1599312614196">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1878" height="191" key="GridCell.Tab.1.right/0.23.1920.1057@0.23.1920.1057" timestamp="1599229295657" />
+    <state width="1878" height="191" key="GridCell.Tab.1.right/0.23.1920.1057@0.23.1920.1057" timestamp="1599312614196" />
     <state x="499" y="267" key="RollbackChangesDialog" timestamp="1597072494203">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="499" y="267" key="RollbackChangesDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1597072494203" />
+    <state width="960" height="528" key="XDebugger.FullValuePopup" timestamp="1599309560542">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="960" height="528" key="XDebugger.FullValuePopup/0.23.1920.1057@0.23.1920.1057" timestamp="1599309560542" />
     <state x="126" y="130" width="1200" height="800" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1597932637115">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
@@ -264,13 +273,29 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="548" y="294" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.23.1920.1057@0.23.1920.1057" timestamp="1599042332741" />
-    <state x="722" y="188" key="refactoring.ChangeSignatureDialog" timestamp="1599220909270">
+    <state x="722" y="188" key="refactoring.ChangeSignatureDialog" timestamp="1599313042586">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="722" y="188" key="refactoring.ChangeSignatureDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1599220909270" />
+    <state x="722" y="188" key="refactoring.ChangeSignatureDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1599313042586" />
     <state x="475" y="250" width="670" height="676" key="search.everywhere.popup" timestamp="1597936790332">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="475" y="250" width="670" height="676" key="search.everywhere.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1597936790332" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/data/TopicsRepo.kt</url>
+          <line>116</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/data/TopicsRepo.kt</url>
+          <line>111</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

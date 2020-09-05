@@ -16,26 +16,43 @@ import io.keepcoding.eh_ho.isFirsTimeCreated
 import kotlinx.android.synthetic.main.activity_posts.*
 
 const val EXTRA_TOPIC_ID = "TOPIC_ID"
-
+const val EXTRA_TOPIC_TITLE = "TOPIC_TITLE"
 const val TRANSACTION_CREATE_POST = "create_post"
 
 class PostsActivity : AppCompatActivity(), PostsFragment.PostsInteractionListener, CreatePostFragment.CreatePostInteractionListener {
+
+    var topicID: String = ""
+    var topicTitle: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_posts)
 
-        Toast.makeText(this, "Al pulsar en un topìc de la lista estoy aquí, en PostActivity !", Toast.LENGTH_SHORT).show()
+        this.topicID = intent.getStringExtra(EXTRA_TOPIC_ID) ?: ""
+        this.topicTitle = intent.getStringExtra(EXTRA_TOPIC_TITLE) ?: ""
 
         // Asociar el Fragmento activity_post.xml
         if (isFirsTimeCreated(savedInstanceState))
             supportFragmentManager.beginTransaction()
-                .add(R.id.fragment_container_posts, PostsFragment())
+                .add(R.id.fragment_container_posts, PostsFragment(this.topicID))
                 .commit()
 
     }
 
-    // Ir a la actividad PostActivityDetail.kt
+    override fun onCreatePost() {
+        // Que hacer cuando se cree el nuevo Post
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container_posts, CreatePostFragment(topicID, topicTitle))
+            .addToBackStack(TRANSACTION_CREATE_POST)
+            .commit()
+    }
+
+    override fun onPostCreated() {
+        supportFragmentManager.popBackStack()
+    }
+
+
+     // Ir a la actividad PostActivityDetail.kt
     private fun goToPostsDetail(post: Post) {
         val intent = Intent(this, PostsActivityDetail::class.java)
 
@@ -45,18 +62,12 @@ class PostsActivity : AppCompatActivity(), PostsFragment.PostsInteractionListene
 
     override fun onDetailPost(post: Post) {
         // Que hacer cuando se muestre el Post seleccionado
-        goToPostsDetail(post)
+      //  goToPostsDetail(post)
     }
 
-    override fun onCreatePost() {
-        // Que hacer cuando se cree el nuevo Post
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container_posts, CreatePostFragment())
-            .addToBackStack(TRANSACTION_CREATE_POST)
-            .commit()
-    }
 
-    override fun onPostCreated() {
-        supportFragmentManager.popBackStack()
-    }
 }
+
+
+
+

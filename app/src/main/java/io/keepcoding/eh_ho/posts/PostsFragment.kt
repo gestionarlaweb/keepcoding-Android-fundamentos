@@ -16,7 +16,9 @@ import io.keepcoding.eh_ho.login.SignInFragment
 import kotlinx.android.synthetic.main.fragment_posts.*
 
 
-class PostsFragment : Fragment() {
+class PostsFragment(postId: String = "") : Fragment() {
+
+    var id = postId
 
     var postsInteractionListener: PostsInteractionListener? = null
 
@@ -48,7 +50,7 @@ class PostsFragment : Fragment() {
             this.postsInteractionListener?.onDetailPost(it)
 
         }
-        // Al darle al boton de creación
+        // Al darle al boton de creación de POST   NO ME FUNCIONA !!!!
         buttonCreatePost.setOnClickListener {
             this.postsInteractionListener?.onCreatePost()
         }
